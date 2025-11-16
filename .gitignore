@@ -3,6 +3,10 @@ __pycache__/
 *.py[codz]
 *$py.class
 
+# large dataset
+dataset/preprocessed/full_year_features.csv
+dataset/preprocessed/full_year_features.parquet
+
 # C extensions
 *.so
 

@@ -11,19 +11,21 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the dataset directory
+# Copy the dataset directory (contains historical data)
 COPY dataset ./dataset
 
-# Copy both prediction scripts
-COPY predict_2025_baseline.py .
-COPY show_predictions.py .
+# Copy trained models directory
+COPY models ./models
+
+# Copy all prediction codes
+COPY codes ./codes
 
 # Copy Makefile for in-container commands
 COPY Makefile .
 
 # Make the scripts executable
-RUN chmod +x predict_2025_baseline.py show_predictions.py
+RUN chmod +x codes/*.py
 
 # Default to bash for interactive mode
-# Users can override with commands like: docker run image make predictions
+# Users can override with commands like: docker run image make prediction
 CMD ["/bin/bash"]
