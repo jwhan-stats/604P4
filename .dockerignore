@@ -1,0 +1,56 @@
+# Git files
+.git
+.gitignore
+.gitattributes
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+
+# Jupyter Notebook checkpoints only (keep notebooks themselves)
+.ipynb_checkpoints
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation
+*.md
+!README.md
+
+# Test files
+tests/
+test_*.py
+*_test.py
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.log
+
+# Results (generated during runtime)
+results/
+
+# Development files (trials folder only)
+codes/trials/
+scratch/
+notebooks/
+experiments/
+
+# large preprocessed file
+dataset/preprocessed/full_year_features.csv
+dataset/preprocessed/full_year_features.parquet
